@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(226, 26, 166);
+  background-color: rgb(141, 137, 140);
 }
 
 h1 {
@@ -19,8 +19,8 @@ h1 {
   position: relative;
   background-color: #fff;
   font-size: 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  font-weight: 300;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+  font-weight: 400;
   transition: background-color 200ms linear;
   box-sizing: content-box;
   transform: translate3d(0, 0, 0);
@@ -53,13 +53,15 @@ li {
   padding: 1em;
   font-size: 1.2em;
   font-weight: bold;
+  border-bottom: 1px solid gray;
+  padding: 10px;
 }
 
 form {
   padding-left: 10px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 2px solid gray;
 }
 
 form input {
@@ -96,4 +98,11 @@ form input {
   font-size: 20px;
   color: rgb(187, 172, 172);
   text-align: center;
+}
+
+.link-button {
+  width: 100%;
+  height: 80%;
+  align-content: center;
+  padding: 20px;
 }
