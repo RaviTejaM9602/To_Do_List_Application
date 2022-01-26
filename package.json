@@ -1,0 +1,31 @@
+{
+  "name": "To_Do_List_Application",
+  "version": "1.0.0",
+  "description": "\"To-do list\" is a tool that helps to organize our day. It simply lists the things that you need to do and allows you to mark them as complete by using ES6 and Webpack!",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaviTejaM9602/To_Do_List_Application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaviTejaM9602/To_Do_List_Application/issues"
+  },
+  "homepage": "https://github.com/RaviTejaM9602/To_Do_List_Application#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
