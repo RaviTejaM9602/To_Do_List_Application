@@ -1,33 +1,44 @@
 import './style.css';
 
-const toDoTasks = [
-  {
-    description: 'Exercise for 30 min',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Get Ready and breakfast',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'Study for 1 hour',
-    completed: false,
-    index: 3,
-  },
-];
+const list = document.querySelector('.item-list');
+// const clear = document.querySelector('.fa-sync');
+const input = document.querySelector('.todoInput');
 
-const List = document.querySelector('.item-list');
+// classes 
 
-const createList = () => {
-  toDoTasks.forEach((task) => {
-    const element = document.createElement('li');
-    element.innerHTML = `<div class="left"><i class="far fa-square"></i> ${task.description} </div>
-    <i class="fa fa-ellipsis-v"></i>`;
-    element.classList.add('rows');
-    List.appendChild(element);
-  });
-};
+// const CHECK = "fa-check-square";
+// const UNCHECK = "fa-square";
+// const LINE_THROUGH = "lineThrough";
 
-window.onload = createList();
+
+
+function addToDo(toDo){
+           const item = `<li class="rows"
+                          <div class="left"><i class="far fa-square">
+                           </i> ${toDo} </div>
+                         <i class="fa fa-ellipsis-v"></i>`
+                  const position = "beforeend";
+                  list.insertAdjacentHTML(position,item);
+      }
+
+      // document.addEventListener('keydown', (event) => {
+      //   if (event.keyCode === 13) {
+      //     pushToDo();
+      //   }
+      // });
+
+input.addEventListener('keydown', (event) => {
+  event.preventDefault();
+  if (event.keyCode === 13) {
+    const toDo = input.value;
+    console.log(input);
+    if(toDo){
+      console.log('Input Entered');
+      addToDo(toDo);
+    }
+    input.value = "";
+  }
+})
+
+
+// window.onload = addToDo("Drink Coffee");
