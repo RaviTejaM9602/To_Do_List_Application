@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import './style.css';
 
 const toDoTasks = [
@@ -8,12 +7,12 @@ const toDoTasks = [
     index: 0,
   },
   {
-    description: 'Get Ready',
+    description: 'Get Ready and breakfast',
     completed: true,
     index: 1,
   },
   {
-    description: 'Go out',
+    description: 'Study for 1 hour',
     completed: false,
     index: 2,
   },
@@ -28,7 +27,6 @@ const createList = () => {
     <i class="fa fa-ellipsis-v"></i>`;
     element.classList.add('rows');
     List.appendChild(element);
-    console.log(List);
   });
 };
 

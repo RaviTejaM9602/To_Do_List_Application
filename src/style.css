@@ -27,7 +27,6 @@ h1 {
   backface-visibility: hidden;
   cursor: pointer;
   list-style: none;
-  width: 94%;
   padding: 15px 1em;
   line-height: 20px;
   word-wrap: break-word;
@@ -54,14 +53,13 @@ li {
   font-size: 1.2em;
   font-weight: bold;
   border-bottom: 1px solid gray;
-  padding: 10px;
 }
 
 form {
   padding-left: 10px;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid gray;
+  border-bottom: 1px solid gray;
 }
 
 form input {
@@ -105,4 +103,5 @@ form input {
   height: 80%;
   align-content: center;
   padding: 20px;
+  border: none;
 }
