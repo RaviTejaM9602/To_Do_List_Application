@@ -4,7 +4,43 @@
     <meta charset="utf-8" />
     <title>Output Management</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/9f089b925d.js"
+      crossorigin="anonymous"
+    ></script>
     <script defer="defer" src="bundle.js"></script>
   </head>
-  <body></body>
+  <body>
+    <main class="main-container">
+      <section class="to-do">
+        <!--Heading Section-->
+        <div class="heading">
+          <p>Today's To Do</p>
+          <i class="fas fa-sync"></i>
+        </div>
+        <!--Input Section-->
+        <div class="input-todo">
+          <form>
+            <input
+              id="new-item"
+              class="new"
+              placeholder="Add to your list..."
+              type="text"
+            />
+            <button type="submit" class="form-btn">
+              <i class="fas fa-level-down-alt rotate add"></i>
+            </button>
+          </form>
+        </div>
+        <div class="item-section">
+          <ul class="item-list"></ul>
+          <div class="clear-button">
+            <button type="button" class="link-button">
+              Clear all Completed Items
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
