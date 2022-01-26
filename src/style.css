@@ -14,7 +14,7 @@ body {
   height: 100%;
 }
 
-img {
+i {
   width: 16px;
   height: 16px;
 }
@@ -65,4 +65,20 @@ h2,
   border-bottom: none;
   justify-content: center;
   text-align: center;
+}
+
+.delete {
+  display: none;
+}
+
+.drag {
+  order: 4;
+}
+
+.showBtn + .delete {
+  display: block;
+}
+
+.showBtn ~ .drag {
+  display: none;
 }

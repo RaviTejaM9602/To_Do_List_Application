@@ -12,36 +12,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
   <script defer src="bundle.js"></script></head>
   <body>
-    <main class="main-container">
-      <section class="to-do">
-        <!--Heading Section-->
-        <div class="heading">
-          <p>Today's To Do</p>
-          <i class="fas fa-sync"></i>
-        </div>
-        <!--Input Section-->
-        <div class="input-todo">
-          <form>
-            <input
-              id="new-item"
-              class="todoInput"
-              placeholder="Add to your list..."
-              type="text"
-            />
-            <button type="submit" class="form-btn">
-              <i class="fas fa-level-down-alt rotate add"></i>
-            </button>
-          </form>
-        </div>
-        <div class="item-section">
-          <ul class="item-list"></ul>
-          <div class="clear-button">
-            <button type="button" class="link-button">
-              Clear all Completed Items
-            </button>
-          </div>
-        </div>
-      </section>
-    </main>
+    <div class="container">
+      <h2 class="heading">
+        Today's To do
+        <i class="fas fa-sync" id="refresh"></i>
+      </h2>
+      <div class="addTodo">
+        <input type="text" class="todoInput" placeholder="Add your task..." />
+        <i class="fas fa-level-down-alt rotate add"></i>
+      </div>
+      <div class="task-content"></div>
+      <button class="clear">clear all completed</button>
+    </div>
   </body>
 </html>

@@ -1,44 +1,53 @@
 import './style.css';
+import {  addToDo } from './add-remove.js';
 
-const list = document.querySelector('.item-list');
-// const clear = document.querySelector('.fa-sync');
 const input = document.querySelector('.todoInput');
+const refresh = document.querySelector('#refresh');
 
-// classes 
+let LIST = '';
+let id = '';
+const data = localStorage.getItem('todoStore');
 
-// const CHECK = "fa-check-square";
-// const UNCHECK = "fa-square";
-// const LINE_THROUGH = "lineThrough";
+if (data) {
+  LIST = JSON.parse(data);
+  id = LIST.length;
+  loadList(LIST);
+} else {
+  LIST = [];
+  id = 0;
+}
 
+refresh.addEventListener('click', () => {
+  localStorage.reload();
+});
 
-
-function addToDo(toDo){
-           const item = `<li class="rows"
-                          <div class="left"><i class="far fa-square">
-                           </i> ${toDo} </div>
-                         <i class="fa fa-ellipsis-v"></i>`
-                  const position = "beforeend";
-                  list.insertAdjacentHTML(position,item);
-      }
-
-      // document.addEventListener('keydown', (event) => {
-      //   if (event.keyCode === 13) {
-      //     pushToDo();
-      //   }
-      // });
-
-input.addEventListener('keydown', (event) => {
-  event.preventDefault();
-  if (event.keyCode === 13) {
-    const toDo = input.value;
-    console.log(input);
-    if(toDo){
-      console.log('Input Entered');
-      addToDo(toDo);
-    }
-    input.value = "";
+const pushToDo = () => {
+  const data = localStorage.getItem('todoStore');
+  if (data) {
+    LIST = JSON.parse(data);
+    id = LIST.length;
+    // loadList(LIST);
+  } else {
+    LIST = [];
+    id = 0;
   }
-})
+  const toDo = input.value;
+  if (toDo) {
+    addToDo(toDo, id, false);
 
-
-// window.onload = addToDo("Drink Coffee");
+    LIST.push({
+      name: toDo,
+      index: id,
+      done: false,
+    });
+    loadList(LIST);
+    localStorage.setItem('todoStore', JSON.stringify(LIST));
+    id += 1;
+  }
+  input.value = '';
+};
+document.addEventListener('keyup', (event) => {
+  if (event.keyCode === 13) {
+    pushToDo();
+  }
+});
