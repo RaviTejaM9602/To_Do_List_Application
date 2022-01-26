@@ -1,4 +1,99 @@
-.hello {
-  color: red;
+body {
+  background-color: rgb(226, 26, 166);
 }
 
+h1 {
+  color: rgb(24, 6, 96);
+}
+
+.main-container {
+  width: 60%;
+  margin: 50px auto;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.rows {
+  font-family: 'Open Sans', 'Lucida Grande', tahoma, verdana, arial, sans-serif;
+  position: relative;
+  background-color: #fff;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  font-weight: 300;
+  transition: background-color 200ms linear;
+  box-sizing: content-box;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  cursor: pointer;
+  list-style: none;
+  width: 94%;
+  padding: 15px 1em;
+  line-height: 20px;
+  word-wrap: break-word;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-square {
+  padding-right: 2rem;
+}
+
+.clear-completed {
+  opacity: 0.5;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+form {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--gray);
+}
+
+form input {
+  border: none;
+  width: 100%;
+  padding: 18px 0 18px 10px;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.form-btn {
+  background-color: white;
+  border: none;
+  font-size: 15px;
+  height: 20px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  height: 20px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.clear {
+  padding: 15px 0 20px 0;
+  font-size: 20px;
+  color: rgb(187, 172, 172);
+  text-align: center;
+}
