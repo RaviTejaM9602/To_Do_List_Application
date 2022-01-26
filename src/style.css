@@ -57,3 +57,12 @@ h2,
   padding-left: 1.7rem;
 }
 
+.checkbox:checked + .input {
+  text-decoration: line-through;
+}
+
+.clear {
+  border-bottom: none;
+  justify-content: center;
+  text-align: center;
+}
