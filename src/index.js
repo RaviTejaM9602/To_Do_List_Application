@@ -4,17 +4,17 @@ const toDoTasks = [
   {
     description: 'Exercise for 30 min',
     completed: false,
-    index: 0,
+    index: 1,
   },
   {
     description: 'Get Ready and breakfast',
     completed: true,
-    index: 1,
+    index: 2,
   },
   {
     description: 'Study for 1 hour',
     completed: false,
-    index: 2,
+    index: 3,
   },
 ];
 
