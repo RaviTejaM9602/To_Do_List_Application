@@ -1,4 +1,7 @@
+import { completeToDo, clearAll } from './clear.js';
+
 const list = document.querySelector('.task-content');
+const clear = document.querySelector('.clear');
 
 let LIST = [];
 
@@ -13,11 +16,6 @@ export const addToDo = (toDo, id, done) => {
   list.insertAdjacentHTML('beforeend', item);
 };
 
-const completeToDo = (LIST, element) => {
-  const task = LIST.find((t) => t.index === Number(element.id));
-  task.done = element.checked;
-  localStorage.setItem('todoStore', JSON.stringify(LIST));
-};
 
 export const removeToDo = (element) => {
   LIST = LIST.filter((t) => t.index !== Number(element.id)).map((t, i) => {
@@ -27,6 +25,10 @@ export const removeToDo = (element) => {
   localStorage.setItem('todoStore', JSON.stringify(LIST));
 };
 
+clear.addEventListener('click', () => {
+  const arr = clearAll(LIST);
+  loadList(arr);
+});
 
 export const loadList = (array) => {
   if (array) {
