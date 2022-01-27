@@ -26,11 +26,11 @@ In the following [link](Coming Soon)
 
 ## Live Server
 
-In the following link, you can view (Coming Soon)).
+In the following link, you can view (https://ravitejam9602.github.io/To_Do_List_Application/)).
 
 ## Screenshot
 
-![To_do_List_App](./images/TodoList.png)
+![To_do_List_App](./images/todoList.png)
 
 # Test
 
