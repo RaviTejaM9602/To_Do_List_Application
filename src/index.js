@@ -1,5 +1,8 @@
 import './style.css';
-import {  addToDo } from './add-remove.js';
+import {
+  loadList,
+  addToDo,
+} from './add-remove.js';
 
 const input = document.querySelector('.todoInput');
 const refresh = document.querySelector('#refresh');
@@ -23,10 +26,11 @@ refresh.addEventListener('click', () => {
 
 const pushToDo = () => {
   const data = localStorage.getItem('todoStore');
+
   if (data) {
     LIST = JSON.parse(data);
     id = LIST.length;
-    // loadList(LIST);
+    loadList(LIST);
   } else {
     LIST = [];
     id = 0;
@@ -46,6 +50,7 @@ const pushToDo = () => {
   }
   input.value = '';
 };
+
 document.addEventListener('keyup', (event) => {
   if (event.keyCode === 13) {
     pushToDo();
