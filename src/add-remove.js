@@ -5,17 +5,16 @@ const clear = document.querySelector('.clear');
 
 let LIST = [];
 
-export const addToDo = (toDo, id, done) => { 
- const item = `
-    <li class="todo-task" ${id}>
-      <input type="checkbox" class="checkbox" ${done ? 'checked' : ''}  id="${id}"/>
-        <input class="input" type="text" value='${toDo}' id="${id}" readonly />
-        <i class="far fa-trash-alt delete" id="${id}"></i>
-        <i class="fa fa-ellipsis-v class="drag" id="${id}" ></i>
-    </li> `;
+export const addToDo = (toDo, id, done) => {
+  const item = `
+  <li class="todo-task" ${id}>
+  <input type="checkbox" class="checkbox" ${done ? 'checked' : ''}  id="${id}"/>
+  <input class="input" type="text" value='${toDo}' id="${id}" readonly />
+  <i class="far fa-trash-alt delete" id="${id}"></i>
+  <i class="fa fa-ellipsis-v class="drag" id="${id}" ></i>
+  </li> `;
   list.insertAdjacentHTML('beforeend', item);
 };
-
 
 export const removeToDo = (element) => {
   LIST = LIST.filter((t) => t.index !== Number(element.id)).map((t, i) => {
