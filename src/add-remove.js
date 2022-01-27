@@ -1,6 +1,6 @@
 import { completeToDo, clearAll } from './clear.js';
 
-const list = document.querySelector('.task-content');
+export const list = document.querySelector('.task-content');
 const clear = document.querySelector('.clear');
 
 let LIST = [];
