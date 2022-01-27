@@ -24,11 +24,6 @@ export const removeToDo = (element) => {
   localStorage.setItem('todoStore', JSON.stringify(LIST));
 };
 
-clear.addEventListener('click', () => {
-  const arr = clearAll(LIST);
-  loadList(arr);
-});
-
 export const loadList = (array) => {
   if (array) {
     LIST = array;
@@ -65,3 +60,8 @@ export const loadList = (array) => {
     });
   });
 };
+
+clear.addEventListener('click', () => {
+  const arr = clearAll(LIST);
+  loadList(arr);
+});
