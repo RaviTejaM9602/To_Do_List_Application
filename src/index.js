@@ -21,7 +21,6 @@ if (data) {
   id = 0;
 }
 
-
 const pushToDo = () => {
   const data = localStorage.getItem('todoStore');
 
@@ -56,7 +55,7 @@ document.addEventListener('keyup', (event) => {
 });
 
 refresh.addEventListener('click', () => {
-  let arr = [];
+  const arr = [];
   window.localStorage.clear();
   localStorage.setItem('todoStore', JSON.stringify(arr));
   list.innerHTML = '';
