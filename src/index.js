@@ -60,4 +60,3 @@ refresh.addEventListener('click', () => {
   localStorage.setItem('todoStore', JSON.stringify(arr));
   list.innerHTML = '';
 });
-
